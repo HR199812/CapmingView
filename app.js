@@ -154,6 +154,21 @@ rockLoader.load('./Resources/Rock/source/rock_01.fbx', (fbx) => {
 
 });
 
+let woodStickLoader = new FBXLoader();
+woodStickLoader.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 10, 190);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
