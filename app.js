@@ -83,6 +83,17 @@ pineLoader.load('./Resources/Tree/scene.gltf', (gltf) => {
         ;
 });
 
+let treeStumpLoader = new GLTFLoader();
+let stump;
+treeStumpLoader.load('./Resources/TreeStump/scene.gltf', (gltf) => {
+
+    stump = gltf.scene.children[0];
+    stump.scale.set(25, 20, 20);
+    stump.position.set(10, 0, 330);
+    stump.rotation.z = 180;
+    scene.add(stump);
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
