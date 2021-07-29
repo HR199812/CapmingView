@@ -57,6 +57,21 @@ container.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
 
+let campLoader = new GLTFLoader();
+let camp;
+campLoader.load('./Resources/Camp/scene.gltf', (gltf) => {
+
+    camp = gltf.scene.children[0];
+    camp.scale.set(1, 1, 1);
+    camp.position.set(150, 8, 350);
+    camp.rotation.z = 180;
+    scene.add(camp)
+
+        ;
+});
+
+
+
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
 var mat = new THREE.MeshBasicMaterial({ color: 0xFA8128, side: THREE.DoubleSide, wireframe: false });
 var plane = new THREE.Mesh(geo, mat);
