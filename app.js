@@ -169,6 +169,82 @@ woodStickLoader.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (
 
 });
 
+let woodStickLoaderOne = new FBXLoader();
+woodStickLoaderOne.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 10, 190);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
+
+let woodStickLoaderTwo = new FBXLoader();
+woodStickLoaderTwo.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 15, 230);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
+
+let woodStickLoaderThree = new FBXLoader();
+woodStickLoaderThree.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 30, 190);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
+let woodStickLoaderFour = new FBXLoader();
+woodStickLoaderFour.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 15, 210);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+let woodStickLoaderFive = new FBXLoader();
+woodStickLoaderFive.load('./Resources/WoodStick/source/wood_stick_08_100k_uw.fbx', (fbx) => {
+    fbx.scale.setScalar(0.05);
+    fbx.position.set(280, 30, 210);
+    fbx.rotation.x = (-Math.PI / 2);
+    fbx.rotation.z = 180;
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
