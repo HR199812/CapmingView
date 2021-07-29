@@ -5,6 +5,10 @@ import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.118.1/examples/j
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.118/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/GLTFLoader.js";
 
+//Initial Car Position Coordinates
+var carX = 40;
+var carY = 10;
+var carZ = 20;
 
 //Initial Camera Position Coordinates
 var cameraX = -180;
