@@ -94,6 +94,30 @@ treeStumpLoader.load('./Resources/TreeStump/scene.gltf', (gltf) => {
     scene.add(stump);
 });
 
+let wellLoader = new GLTFLoader();
+let well;
+wellLoader.load('./Resources/Well/scene.gltf', (gltf) => {
+
+    well = gltf.scene.children[0];
+    well.scale.set(2, 2, 1);
+    well.position.set(520, 0, 140);
+    well.rotation.z = 180;
+    scene.add(well);
+});
+
+
+let rocksLoader = new GLTFLoader();
+let rocks;
+rocksLoader.load('./Resources/Rocks/scene.gltf', (gltf) => {
+
+    rocks = gltf.scene.children[0];
+    rocks.scale.set(50, 50, 50);
+    rocks.position.set(200, 20, 120);
+    rocks.rotation.z = 180;
+    scene.add(rocks)
+        ;
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
