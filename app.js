@@ -94,6 +94,25 @@ treeStumpLoader.load('./Resources/TreeStump/scene.gltf', (gltf) => {
     scene.add(stump);
 });
 
+
+let carMove;
+let car = new FBXLoader();
+car.load('./Resources/Vehicle/car.fbx', (fbx) => {
+
+    // fbx.scale.setScalar(0.3);
+    carMove = fbx;
+    fbx.scale.setScalar(10);
+    fbx.position.set(carX, carY, carZ);
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
+
 let wellLoader = new GLTFLoader();
 let well;
 wellLoader.load('./Resources/Well/scene.gltf', (gltf) => {
