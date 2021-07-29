@@ -118,6 +118,19 @@ rocksLoader.load('./Resources/Rocks/scene.gltf', (gltf) => {
         ;
 });
 
+let rockLoader = new FBXLoader();
+rockLoader.load('./Resources/Rock/source/rock_01.fbx', (fbx) => {
+    fbx.scale.setScalar(0.5);
+    fbx.position.set(430, 10, 430);
+    fbx.traverse(c => {
+        c.castShadow = true;
+        c.receiveShadow = false;
+    });
+
+    scene.add(fbx);
+
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
