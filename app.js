@@ -70,6 +70,19 @@ campLoader.load('./Resources/Camp/scene.gltf', (gltf) => {
         ;
 });
 
+let pineLoader = new GLTFLoader();
+let pine;
+pineLoader.load('./Resources/Tree/scene.gltf', (gltf) => {
+
+    pine = gltf.scene.children[0];
+    pine.scale.set(20, 25, 20);
+    pine.position.set(400, 0, 400);
+    pine.rotation.z = 180;
+    scene.add(pine)
+
+        ;
+});
+
 
 
 var geo = new THREE.PlaneGeometry(15000, 15000, 30, 30);
