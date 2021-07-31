@@ -290,3 +290,16 @@ function onWindowResize() {
 }
 
 animate();
+
+
+//Remove Splash Screen on click of button
+document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
+
+    anime({
+        targets: '.Splash',
+        translateY: [
+            { value: 0, duration: 1000, delay: 500 },
+            { value: -1000, duration: 1000, delay: 500 },
+        ]
+    });
+});
