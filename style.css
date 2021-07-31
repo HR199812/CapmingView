@@ -5,9 +5,26 @@
 	padding: 0;
 	/* box-sizing: border-box; */
 	overflow: hidden;
-	
+	font-family: 'Otomanopee One', sans-serif;
 }
 
+.SplashForSmallDevices{
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: absolute;
+    top: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 2rem;
+	right: 0px;
+
+}
 
 .Splash{
 	position: absolute;
@@ -42,3 +59,36 @@
 	height: 50px;
 }
 
+
+@media screen and (max-width:746px) {
+
+	.Splash{
+		visibility: hidden;
+	}
+	.SplashForSmallDevices{
+		visibility: visible;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		padding: 2rem;
+		right: 0px;
+	}
+	/* .threejslogo{
+		width: 50px;
+		height: 100px;
+	} */
+	.TechnologiesUsed img{
+		width: 50%;
+		height: 50%;
+	}
+	
+	
+}
