@@ -303,3 +303,14 @@ document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
         ]
     });
 });
+//Remove Small Splash Screen on click of button
+document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () => {
+
+    anime({
+        targets: '.SplashForSmallDevices',
+        translateY: [
+            { value: 0, duration: 1000, delay: 500 },
+            { value: -1000, duration: 1000, delay: 500 },
+        ]
+    });
+});
