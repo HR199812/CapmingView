@@ -1,6 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+
 *{
     margin: 0;
 	padding: 0;
 	/* box-sizing: border-box; */
 	overflow: hidden;
 }
+
+
+.Splash{
+	position: absolute;
+    top: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 2rem;
+	right: 0px;
+    width: 100%;
+	height: 100%;
+    /* text-align: center; */
+	justify-content: center;
+	align-items: center;
+	display: flex;
+    z-index: 1;
+
+	/* background-color: black; */
+}
+
+.TechnologiesUsed img{
+	width: 20%;
+	height: 20%;
+}
+
+.MouseControls img{
+	width: 20%;
+	height: 20%;
+}
+
+.KeyBoardControls img{
+	width: 50px;
+	height: 50px;
+}
+
