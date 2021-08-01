@@ -26,6 +26,16 @@
 
 }
 
+.smallScreenControls {
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 1rem;
+	right: 0px;
+}
+
 .Splash{
 	position: absolute;
     top: 0px;
@@ -91,5 +101,31 @@
 		height: 45%;
 	}
 	
-	
+	.smallScreenControls {
+		visibility: hidden;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		/* padding: 1rem; */
+		right: 0px;
+	}
+	.smallScreenControls ul {
+		display: block;
+		list-style: none;
+	}
+	.smallScreenControls li {
+		margin: 10px;
+		float: left;
+	}
+	.smallScreenControls button {
+		padding: 1rem;
+		background-color: none;
+		border-radius: 100%;
+		border: 1px solid black;
+	}
+	.smallScreenControls img {
+		width: 1rem;
+		height: 1rem;
+	}
 }
