@@ -15,6 +15,44 @@ var cameraX = -180;
 var cameraY = 250;
 var cameraZ = -150;
 
+
+//Music Player
+var musicPLayer = new Howl({
+    src: ['./Audio/MusicPlayer/MusicPlayerSongs.mp3'],
+    html5: true,
+    volume: 1,
+    loop: true
+});
+
+//Car Honk Sound 
+var honkSound = new Howl({
+    src: ['./Audio/CarSound/Car-Horn.mp3'],
+    volume: 0.5,
+});
+
+
+//Car Engine Sound 
+var engineSound = new Howl({
+    src: ['./Audio/CarSound/Car-Engine.mp3'],
+    html5: true,
+    volume: 0.1,
+    loop: true
+});
+
+//Car Engine Start Sound 
+var engineStart = new Howl({
+    src: ['./Audio/CarSound/Car-Engine-Start.mp3'],
+    html5: true,
+    volume: 0.4
+});
+
+//Car Acceleration Sound 
+// var engineAcceleration = new Howl({
+//     src: ['./Audio/CarSound/Car-Acceleration.mp3'],
+//     html5: true,
+//     volume: 0.4
+// });
+
 //Scene Creation
 var scene = new THREE.Scene();
 scene.background = new THREE.Color(0xED7117);
