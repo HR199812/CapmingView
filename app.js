@@ -313,4 +313,6 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
             { value: -1000, duration: 1000, delay: 500 },
         ]
     });
+
+    document.querySelector('.smallScreenControls').style.visibility = 'visible';
 });
