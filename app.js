@@ -385,6 +385,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //Remove Splash Screen on click of button
 document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
 
+    engineStart.play();
+    engineSound.play();
+
     anime({
         targets: '.Splash',
         translateY: [
@@ -396,6 +399,9 @@ document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
 //Remove Small Splash Screen on click of button
 document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () => {
 
+    engineStart.play();
+    engineSound.play();
+    
     anime({
         targets: '.SplashForSmallDevices',
         translateY: [
