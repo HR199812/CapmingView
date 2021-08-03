@@ -329,6 +329,59 @@ function onWindowResize() {
 
 animate();
 
+//Animating Mouse on splash screen
+document.addEventListener('DOMContentLoaded', () => {
+
+    anime({
+        targets: '.Splash',
+        translateY: [
+            { value: -1000, duration: 1000, delay: 500 },
+            { value: 0, duration: 1000, delay: 500 }
+        ]
+    });
+
+    anime({
+        targets: '.LeftMouse',
+        translateX: [
+            { value: 0, duration: 1000, delay: 500 },
+            { value: -30, duration: 1000, delay: 500 },
+            { value: 0, duration: 1000, delay: 500 },
+        ],
+        loop: true
+    });
+
+    anime({
+        targets: '.RightMouse',
+        translateX: [
+            { value: 0, duration: 1000, delay: 500 },
+            { value: 30, duration: 1000, delay: 500 },
+            { value: 0, duration: 1000, delay: 500 },
+        ],
+        loop: true
+    });
+
+    anime({
+        targets: '.MouseScroll',
+        scale: [
+            { value: 0.8, duration: 1000 },
+            { value: 1, duration: 1000 },
+        ],
+        loop: true
+    });
+
+    anime({
+        targets: '.ScrollSplashScreenUp',
+        translateY: [
+            { value: 0, duration: 1000 },
+            { value: 10, duration: 1000 },
+        ],
+        scale: [
+            { value: 1.2, duration: 1000 },
+        ],
+        loop: true
+    });
+});
+
 
 //Remove Splash Screen on click of button
 document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
