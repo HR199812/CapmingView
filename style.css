@@ -128,4 +128,49 @@
 		width: 1rem;
 		height: 1rem;
 	}
+	.movementControls {
+		position: absolute;
+		/* top:0; */
+		bottom: 0;
+		/* left: 0;
+		right: 0; */
+		width: 100%;
+	}
+	.movementControls button{
+		padding: 10px;
+		background-color: none;
+		border-radius: 100%;
+		border: 1px solid black;
+	}
+	.forwardBackward {
+		float: left;
+	}
+	.leftright {
+		float: right;
+	}
+	.movementControls img {
+		width: 2rem;
+		height: 2rem;
+	}
+	#forward {
+		transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+	}
+	#backward {
+		transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+	}
+	#left {
+		transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-webkit-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+	}
 }
