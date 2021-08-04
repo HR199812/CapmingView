@@ -36,6 +36,23 @@
 	right: 0px;
 }
 
+.soundControls {
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 1rem;
+	right: 0px;
+}
+
+.movementControls {
+	visibility: hidden;
+	position: absolute;
+	bottom: 0px;
+	padding: 1rem;
+}
+
 .Splash{
 	position: absolute;
     top: 0px;
