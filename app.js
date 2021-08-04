@@ -430,3 +430,20 @@ document.querySelector('.playmusic').addEventListener('click', () => {
     musicPLayer.play();
     document.querySelector('.playmusic').disabled = true;
 });
+var muteunmuteCheck = false;
+document.querySelector('.muteeverything').addEventListener('click', () => {
+    if (muteunmuteCheck) {
+        engineSound.play();
+        musicPLayer.pause();
+        document.querySelector('.playmusic').disabled = false;
+        document.querySelector('.muteunmute').src = './SplashScreenResources/Controls/unmute.png';
+        muteunmuteCheck = false;
+    }
+    else {
+        engineSound.pause();
+        musicPLayer.pause();
+        document.querySelector('.playmusic').disabled = false;
+        document.querySelector('.muteunmute').src = './SplashScreenResources/Controls/mute.png';
+        muteunmuteCheck = true;
+    }
+});
