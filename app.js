@@ -408,7 +408,7 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
 
     engineStart.play();
     engineSound.play();
-
+    
     anime({
         targets: '.SplashForSmallDevices',
         translateY: [
@@ -422,41 +422,11 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
     document.querySelector('.movementControls').style.visibility = 'visible';
 });
 
-window.addEventListener('keydown', (e) => {
-
-
-    //Plau/Pause Music
-    if (e.key === 'p') {
-        if (isMusicPlayerSound) {
-            engineSound.play();
-            isMusicPlayerSound = false;
-            musicPLayer.pause();
-        }
-        else {
-            engineSound.pause();
-            isMusicPlayerSound = true;
-            musicPLayer.play();
-        }
-
-    }
-
-
-    //Mute/Unmute all sounds
-    if (e.key === 'm') {
-        if (isCarEngineSound) {
-            engineSound.pause();
-            musicPLayer.pause();
-            isCarEngineSound = false;
-        }
-        else {
-            musicPLayer.pause();
-            engineSound.play();
-            isCarEngineSound = true;
-        }
-
-    }
-    //PLay Honk Sound
-    if (e.key === 'h') {
-        honkSound.play();
-    }
+document.querySelector('.honk').addEventListener('click', () => {
+    honkSound.play();
+});
+document.querySelector('.playmusic').addEventListener('click', () => {
+    engineSound.pause();
+    musicPLayer.play();
+    document.querySelector('.playmusic').disabled = true;
 });
