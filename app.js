@@ -442,7 +442,7 @@ document.querySelector('.muteeverything').addEventListener('click', () => {
     else {
         engineSound.pause();
         musicPLayer.pause();
-        document.querySelector('.playmusic').disabled = false;
+        // document.querySelector('.playmusic').disabled = false;
         document.querySelector('.muteunmute').src = './SplashScreenResources/Controls/mute.png';
         muteunmuteCheck = true;
     }
