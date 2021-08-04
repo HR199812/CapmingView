@@ -15,6 +15,12 @@ var cameraY = 250;
 var cameraZ = -150;
 
 
+//Boolean for play/pause car engine sound
+var isCarEngineSound = true;
+
+//Boolean for play/pause music player
+var isMusicPlayerSound = false;
+
 //Music Player
 var musicPLayer = new Howl({
     src: ['./AudioResources/MusicPlayer/MusicPlayerSongs.mp3'],
@@ -51,6 +57,7 @@ var engineStart = new Howl({
 //     html5: true,
 //     volume: 0.4
 // });
+
 
 //Scene Creation
 var scene = new THREE.Scene();
@@ -401,7 +408,7 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
 
     engineStart.play();
     engineSound.play();
-    
+
     anime({
         targets: '.SplashForSmallDevices',
         translateY: [
@@ -413,4 +420,43 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
     document.querySelector('.soundControls').style.visibility = 'visible';
 
     document.querySelector('.movementControls').style.visibility = 'visible';
+});
+
+window.addEventListener('keydown', (e) => {
+
+
+    //Plau/Pause Music
+    if (e.key === 'p') {
+        if (isMusicPlayerSound) {
+            engineSound.play();
+            isMusicPlayerSound = false;
+            musicPLayer.pause();
+        }
+        else {
+            engineSound.pause();
+            isMusicPlayerSound = true;
+            musicPLayer.play();
+        }
+
+    }
+
+
+    //Mute/Unmute all sounds
+    if (e.key === 'm') {
+        if (isCarEngineSound) {
+            engineSound.pause();
+            musicPLayer.pause();
+            isCarEngineSound = false;
+        }
+        else {
+            musicPLayer.pause();
+            engineSound.play();
+            isCarEngineSound = true;
+        }
+
+    }
+    //PLay Honk Sound
+    if (e.key === 'h') {
+        honkSound.play();
+    }
 });
