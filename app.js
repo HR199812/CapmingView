@@ -349,15 +349,15 @@ document.addEventListener('DOMContentLoaded', () => {
         loop: true
     });
 
-    anime({
-        targets: '.RightMouse',
-        translateX: [
-            { value: 0, duration: 1000, delay: 500 },
-            { value: 30, duration: 1000, delay: 500 },
-            { value: 0, duration: 1000, delay: 500 },
-        ],
-        loop: true
-    });
+    // anime({
+    //     targets: '.RightMouse',
+    //     translateX: [
+    //         { value: 0, duration: 1000, delay: 500 },
+    //         { value: 30, duration: 1000, delay: 500 },
+    //         { value: 0, duration: 1000, delay: 500 },
+    //     ],
+    //     loop: true
+    // });
 
     anime({
         targets: '.MouseScroll',
