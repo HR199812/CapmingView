@@ -410,5 +410,7 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
         ]
     });
 
-    document.querySelector('.smallScreenControls').style.visibility = 'visible';
+    document.querySelector('.soundControls').style.visibility = 'visible';
+
+    document.querySelector('.movementControls').style.visibility = 'visible';
 });
