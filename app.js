@@ -67,7 +67,7 @@ scene.fog = new THREE.FogExp2(0xED7014, 0.00144);
 
 //Creating Camera for the scene
 var camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(cameraX, cameraY, cameraZ);
+// camera.position.set(cameraX, cameraY, cameraZ);
 
 var dirlight = new THREE.DirectionalLight(0xFFF000, 1);
 dirlight.position.set(20, 100, 10);
@@ -298,8 +298,9 @@ scene.add(plane);
 plane.rotation.x = (-Math.PI / 2);
 
 
-
-camera.lookAt(new THREE.Vector3(0, 0, 0));
+camera.position.set(carX, carY, carZ);
+camera.position.add(new THREE.Vector3(cameraX, cameraY, cameraZ));
+camera.lookAt(carX, carY, carZ);
 
 
 
