@@ -14,6 +14,15 @@ var cameraX = -180;
 var cameraY = 250;
 var cameraZ = -150;
 
+//Movement Keys
+let MovementKeys =
+{
+    Shift: false,
+    a: false,
+    w: false,
+    d: false,
+    s: false,
+}
 
 //Boolean for play/pause car engine sound
 var isCarEngineSound = true;
