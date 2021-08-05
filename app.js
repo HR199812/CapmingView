@@ -457,3 +457,62 @@ document.querySelector('.muteeverything').addEventListener('click', () => {
         muteunmuteCheck = true;
     }
 });
+
+
+//Play/Pause Engine Acceleration
+window.addEventListener('keydown', (e) => {
+
+
+    //Plau/Pause Music
+    if (e.key === 'p') {
+        if (isMusicPlayerSound) {
+            engineSound.play();
+            isMusicPlayerSound = false;
+            musicPLayer.pause();
+        }
+        else {
+            engineSound.pause();
+            isMusicPlayerSound = true;
+            musicPLayer.play();
+        }
+
+    }
+
+
+    //Mute/Unmute all sounds
+    if (e.key === 'm') {
+        if (isCarEngineSound) {
+            engineSound.pause();
+            musicPLayer.pause();
+            isCarEngineSound = false;
+        }
+        else {
+            musicPLayer.pause();
+            engineSound.play();
+            isCarEngineSound = true;
+        }
+
+    }
+    //PLay Honk Sound
+    if (e.key === 'h') {
+        honkSound.play();
+    }
+
+    //Car Movement
+    if (e.key === 'Shift') {
+        MovementKeys.Shift = true;
+    }
+    if (e.key === 'a') {
+        MovementKeys.a = true;
+    }
+    if (e.key === 'w') {
+        MovementKeys.w = true;
+    }
+    if (e.key === 'd') {
+        MovementKeys.d = true;
+    }
+    if (e.key === 's') {
+        MovementKeys.s = true;
+    }
+
+});
