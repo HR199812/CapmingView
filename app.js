@@ -516,3 +516,29 @@ window.addEventListener('keydown', (e) => {
     }
 
 });
+
+window.addEventListener('keyup', (e) => {
+    if (e.key === 'Shift') {
+        MovementKeys.Shift = false;
+    }
+    if (e.key === 'a') {
+        MovementKeys.a = false;
+    }
+    if (e.key === 'd') {
+        MovementKeys.d = false;
+    }
+    if (e.key === 'w') {
+        MovementKeys.w = false;
+    }
+    if (e.key === 's') {
+        MovementKeys.s = false;
+    }
+
+    if (e.key === 'w' || e.key === 'ArrowUp') {
+        // engineAcceleration.pause();
+    }
+
+    if (e.key === 'Alt') {
+        handBreak.pause();
+    }
+});
