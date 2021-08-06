@@ -542,3 +542,16 @@ window.addEventListener('keyup', (e) => {
         handBreak.pause();
     }
 });
+
+document.querySelector('.forward').addEventListener('touchstart', (e)=>{
+    MovementKeys.w = true;
+});
+document.querySelector('.backward').addEventListener('touchstart', (e)=>{
+    MovementKeys.s = true;
+});
+document.querySelector('.left').addEventListener('touchstart', (e)=>{
+    MovementKeys.a = true;
+});
+document.querySelector('.right').addEventListener('touchstart', (e)=>{
+    MovementKeys.d = true;
+});
