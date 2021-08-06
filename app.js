@@ -413,6 +413,7 @@ document.querySelector('.RemoveSplashScreen').addEventListener('click', () => {
         ]
     });
 });
+
 //Remove Small Splash Screen on click of button
 document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () => {
 
@@ -432,14 +433,19 @@ document.querySelector('.RemoveSmallSplashScreen').addEventListener('click', () 
     document.querySelector('.movementControls').style.visibility = 'visible';
 });
 
+// Play Honk Sound BUtton Event
 document.querySelector('.honk').addEventListener('click', () => {
     honkSound.play();
 });
+
+// Play Music button event
 document.querySelector('.playmusic').addEventListener('click', () => {
     engineSound.pause();
     musicPLayer.play();
     document.querySelector('.playmusic').disabled = true;
 });
+
+// Mute button Event
 var muteunmuteCheck = false;
 document.querySelector('.muteeverything').addEventListener('click', () => {
     if (muteunmuteCheck) {
@@ -459,11 +465,11 @@ document.querySelector('.muteeverything').addEventListener('click', () => {
 });
 
 
-//Play/Pause Engine Acceleration
+// keydown
 window.addEventListener('keydown', (e) => {
 
 
-    //Plau/Pause Music
+    //Play/Pause Music
     if (e.key === 'p') {
         if (isMusicPlayerSound) {
             engineSound.play();
@@ -517,6 +523,7 @@ window.addEventListener('keydown', (e) => {
 
 });
 
+// KeyUp
 window.addEventListener('keyup', (e) => {
     if (e.key === 'Shift') {
         MovementKeys.Shift = false;
@@ -543,6 +550,8 @@ window.addEventListener('keyup', (e) => {
     }
 });
 
+
+// Touch Start
 document.querySelector('.forward').addEventListener('touchstart', (e)=>{
     MovementKeys.w = true;
 });
@@ -555,3 +564,20 @@ document.querySelector('.left').addEventListener('touchstart', (e)=>{
 document.querySelector('.right').addEventListener('touchstart', (e)=>{
     MovementKeys.d = true;
 });
+
+//Touch End
+document.querySelector('.forward').addEventListener('touchend', (e)=>{
+    MovementKeys.w = false;
+});
+document.querySelector('.backward').addEventListener('touchend', (e)=>{
+    MovementKeys.s = false;
+});
+document.querySelector('.left').addEventListener('touchend', (e)=>{
+    MovementKeys.a = false;
+});
+document.querySelector('.right').addEventListener('touchend', (e)=>{
+    MovementKeys.d = false;
+});
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
