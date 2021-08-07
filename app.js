@@ -325,6 +325,66 @@ controls.maxPolarAngle = Math.PI / 2.5;
 controls.update();
 
 
+let velocity = 0;
+let steering = 0;
+
+
+let carVelocity = new THREE.Vector3()
+let tv0 = new THREE.Vector3()
+let tv1 = new THREE.Vector3()
+let { min, max, abs } = Math;
+
+let updateVehicle = () => {
+
+    //Car Move Forwards
+    if (MovementKeys.w) {
+        // engineAcceleration.play();
+
+        velocity += MovementKeys.Shift ? 1 : 2;
+    }
+    if (MovementKeys.a) {
+
+        steering -= 1;
+        // engineAcceleration.play();
+    }
+    if (MovementKeys.d) {
+        steering += 1;
+        // engineAcceleration.play();
+    }
+
+    //Car Move Backwards
+    if (MovementKeys.s) {
+        // engineAcceleration.play();
+        velocity -= MovementKeys.Shift ? 1 : 2;
+    }
+    if (carMove) {
+        carVelocity.set(0, 0, velocity)
+        carVelocity.applyQuaternion(carMove.quaternion)
+        carVelocity.multiplyScalar(.1)
+        carMove.position.add(carVelocity);
+        carMove.rotation.y -= steering * 0.001
+
+        velocity *= .98;
+        steering *= .98;
+
+        tv0.copy(controls.target).sub(camera.position);
+        let len = tv0.length()
+        controls.target.add(carVelocity);
+        carVelocity.multiplyScalar(.1)
+        camera.position.add(carVelocity);
+
+        tv0.copy(camera.position).sub(controls.target);
+
+        let nlen = tv0.length()
+
+        nlen = max(200, nlen)
+        tv0.multiplyScalar(len / nlen);
+        camera.position.copy(tv0).add(controls.target)
+
+        camera.position.y = max(camera.position.y, 30)
+    }
+}
+
 var animate = function () {
     requestAnimationFrame(animate);
 
