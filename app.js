@@ -390,6 +390,8 @@ var animate = function () {
 
     controls.update();
 
+    updateVehicle();
+
     renderer.render(scene, camera);
 }
 
