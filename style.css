@@ -8,6 +8,7 @@
 }
 
 .SplashForSmallDevices {
+	overflow: unset;
 	z-index: 1;
 	width: 100%;
 	height: 100%;
@@ -25,6 +26,7 @@
 }
 
 .smallScreenControls {
+	display: none;
 	visibility: hidden;
 	position: absolute;
 	top: 0px;
@@ -35,6 +37,7 @@
 }
 
 .soundControls {
+	display: none;
 	visibility: hidden;
 	position: absolute;
 	top: 0px;
@@ -45,6 +48,7 @@
 }
 
 .movementControls {
+	display: none;
 	visibility: hidden;
 	position: absolute;
 	bottom: 0px;
@@ -93,6 +97,7 @@
 		display: none;
 	}
 	.SplashForSmallDevices {
+		display: block;
 		visibility: visible;
 		z-index: 1;
 		width: fit-content;
@@ -117,6 +122,7 @@
 		height: 55%;
 	}
 	.smallScreenControls {
+		display: block;
 		visibility: hidden;
 		position: absolute;
 		top: 0px;
@@ -143,7 +149,18 @@
 		width: 1rem;
 		height: 1rem;
 	}
+	.soundControls {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 1rem;
+	right: 0px;
+}
 	.movementControls {
+		display: block;
 		position: absolute;
 		bottom: 0;
 		left: 0;
